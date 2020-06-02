@@ -17,10 +17,19 @@
 图片已获授权，禁止无端转载  
 画师：墨鱼 p站(https://www.pixiv.net/member.php?id=17432287)  
 
-## usage
+## Usage
+需要安装cuda10.1，已在win10和ubuntu16.04上测试。图片只接受png格式  
+需要放大的图片放置于src目录下的test_image，并命名为original.png
 ```
 cd ./src
 pip3 -r install requirements.txt
 python3 start.py
 ```
-## how to train
+## How to train
+将尽量高清的图片放置于./data/original目录下，要求为png  
+```
+cd ./src
+python3 generate.py
+python3 train.py
+```
+保存的模型参数在./checkpoints目录下

@@ -27,7 +27,7 @@ def main():
     # 选择模型
     target_model = model.choos_model(DEFAULT_MODEL)
     # 接受训练中的数据,batch_size=8
-    history = compile_and_fit(target_model, train_low_images, train_high_images,valid_low_images,valid_high_images,epochs=500,batch=BATCH_SIZE)
+    history = compile_and_fit(target_model, train_low_images, train_high_images,valid_low_images,valid_high_images,epochs=DEFAULT_EPOCH,batch=BATCH_SIZE)
     history_dict = history.history
 
     # 存储history信息
