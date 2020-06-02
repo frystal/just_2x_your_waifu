@@ -26,13 +26,19 @@ else:
     INPUT_IMAGE_PATH = './test_image/original.png'
     OUTPUT_IMAGE_PATH = './test_image/2x.png'
     
+# train
 DEFAULT_MODEL = 'vgg_7'
 BATCH_SIZE = 8
 STEPS_PER_EPOCH = 5000
 
+# start
 OUTPUT_IMAGE_SIZE = 64
 INPUT_IMAGE_SIZE = 32
+
+
+# generate
 SCALE = 2
+BLOCK_SIZE = 64
 
 
 

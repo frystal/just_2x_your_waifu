@@ -36,13 +36,10 @@ def main():
 
             output_high_image[2*y : 2*y + OUTPUT_IMAGE_SIZE, 2*x : 2*x + OUTPUT_IMAGE_SIZE, ...] = test_high_image[0, ...]
 
-
-
     cv2.imwrite(OUTPUT_IMAGE_PATH,output_high_image*255)
 
     print('-'*150)
     print('!OK!')
-
 
 
 if __name__ == '__main__':
