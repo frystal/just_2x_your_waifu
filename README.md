@@ -3,9 +3,8 @@
 <p align="center">
 原始图片
 </p>  
-
 <p align="center">
-![original](https://raw.githubusercontent.com/frystal/just_2x_your_waifu/master/demo/original.png)
+<img src="https://raw.githubusercontent.com/frystal/just_2x_your_waifu/master/demo/original.png"/><br/>
 </p>  
 <p align="center">
 放大图片
