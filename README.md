@@ -34,3 +34,9 @@ python3 generate.py
 python3 train.py
 ```
 保存的模型参数在./checkpoints目录下
+
+## Live demo
+不稳定，随时可能下线
+```
+http://182.92.241.162:10000/
+```
