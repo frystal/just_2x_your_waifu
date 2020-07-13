@@ -15,11 +15,11 @@
 </p>  
 
 
-图片已获授权，禁止无端转载  
+图片已获授权 
 画师：墨鱼 p站(https://www.pixiv.net/member.php?id=17432287)  
 
 ## Usage
-需要安装cuda10.1，已在win10和ubuntu16.04上测试。图片只接受png格式  
+需求tensorflow2.1.0  
 需要放大的图片放置于src目录下的test_image，并命名为original.png
 ```
 cd ./src
@@ -33,10 +33,14 @@ cd ./src
 python3 generate.py
 python3 train.py
 ```
-保存的模型参数在./checkpoints目录下
+保存的模型参数在./checkpoints目录下  
+模型导出在./model目录下
 
 ## Live demo
-不稳定，随时可能下线
+增加了简易的web端，仅供娱乐用途  
+需求flask  
 ```
-http://182.92.241.162:10000/
+cd ./webserver
+python3 app.py
 ```
+端口为5000

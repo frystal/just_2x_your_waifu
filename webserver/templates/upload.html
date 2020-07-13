@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>upload demo</title>
+</head>
+<body>
+	<form action="/uploads.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="file"/>
+		<input type="text" name="tags" placeholder="tags spilt by space" value=""/>
+		<input type="submit" value="upload"/>
+	</form>
+ 
+</body>
+<h2>{{result}}</h2>
+</html>

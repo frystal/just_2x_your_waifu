@@ -17,7 +17,7 @@ def main():
     train_high_images = high_images(TRAINING_IMAGES_PATH)
     train_high_images = train_high_images/255
     # 对训练集进行图像增强
-    train_high_images = image_preprocess(train_high_images)
+    # train_high_images = image_preprocess(train_high_images)
     train_low_images = tf.image.resize(train_high_images,[32,32], method='bilinear')
 
     # 导入验证集
@@ -29,6 +29,9 @@ def main():
     # 接受训练中的数据,batch_size=8
     history = compile_and_fit(target_model, train_low_images, train_high_images,valid_low_images,valid_high_images,epochs=DEFAULT_EPOCH,batch=BATCH_SIZE)
     history_dict = history.history
+
+    # 存储模型
+    target_model.save(MODEL_PATH)
 
     # 存储history信息
     serialize(history_dict)
@@ -58,7 +61,7 @@ def image_preprocess(images):
     images=4-D tensor
     '''
     images = tf.image.random_brightness(images, max_delta=0.3)
-    images = tf.image.random_contrast(images, 0.8, 1.2)
+    # images = tf.image.random_contrast(images, 0.8, 1.2)
     return images
 
 def show_image(image):
@@ -81,7 +84,7 @@ def get_optimizer():
 
 def get_callbacks():
     return [
-    tf.keras.callbacks.ModelCheckpoint(filepath=CHECKPOINTS_PATH,save_weights_only=True,verbose=1,period=1)
+    tf.keras.callbacks.ModelCheckpoint(filepath=CHECKPOINTS_PATH,save_weights_only=True,verbose=1,period=5)
     ]
 
 
@@ -156,4 +159,5 @@ def draw_result(history_dict):
 
 if __name__ == '__main__':
     main()
+
 

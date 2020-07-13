@@ -1,33 +1,19 @@
 import os
 
 # data path and log path
-if(os.name=='poxis'):
-    ORIGINAL_IMAGES_PATH = '../data/original'
-    TRAINING_IMAGES_PATH = '../data/train'
-    VALIDATION_IMAGES_PATH = '../data/valid'
-    CHECKPOINTS_PATH = '../checkpoints/cp.ckpt'
-    SERIALIZE_PATH = './tmp.data'
-    INPUT_IMAGE_PATH = './test_image/original.png'
-    OUTPUT_IMAGE_PATH = './test_image/2x.png'
-elif(os.name=='nt'):
-    ORIGINAL_IMAGES_PATH = '..\\data\\original'
-    TRAINING_IMAGES_PATH = '..\\data\\train'
-    VALIDATION_IMAGES_PATH = '..\\data\\valid'
-    CHECKPOINTS_PATH = '..\\checkpoints\\cp.ckpt'
-    SERIALIZE_PATH = '.\\tmp.data'
-    INPUT_IMAGE_PATH = '.\\test_image\\original.png'
-    OUTPUT_IMAGE_PATH = '.\\test_image\\2x.png'
-else:
-    ORIGINAL_IMAGES_PATH = '../data/original'
-    TRAINING_IMAGES_PATH = '../data/train'
-    VALIDATION_IMAGES_PATH = '../data/valid'
-    CHECKPOINTS_PATH = '../checkpoints/cp.ckpt'
-    SERIALIZE_PATH = './tmp.data'
-    INPUT_IMAGE_PATH = './test_image/original.png'
-    OUTPUT_IMAGE_PATH = './test_image/2x.png'
+ORIGINAL_IMAGES_PATH = '../data/original'
+TRAINING_IMAGES_PATH = '../data/train'
+VALIDATION_IMAGES_PATH = '../data/valid'
+CHECKPOINTS_PATH = '../checkpoints/cp.ckpt'
+SERIALIZE_PATH = './tmp.data'
+INPUT_IMAGE_PATH = './test_image/original.png'
+OUTPUT_IMAGE_PATH = './test_image/2x.png'
+MODEL_PATH = '../model/model.h5'
+
+
     
 # train
-DEFAULT_MODEL = 'vgg_7'     # 模型名
+DEFAULT_MODEL = 'vgg_11'     # 模型名
 BATCH_SIZE = 8              # batch大小
 DEFAULT_EPOCH = 1500        # 循环次数
 STEPS_PER_EPOCH = 5000

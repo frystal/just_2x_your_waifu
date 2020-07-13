@@ -1,0 +1,27 @@
+<header>
+
+</header>
+
+<body>
+
+    <br>
+  
+    <br>
+    {% for file in files %}
+    <h1>{{file.file_name}}</h1>
+    <h3>Status: {{file.status}}</h3>
+    <h4>Tag: {% for tag in file.tag %} {{tag}}; {% endfor %}</h4>
+    
+    Modify Time: {{file.time}}
+    <br>
+    <a href="{{'/upload/'+file.file_hash}}">
+        <button>download</button>
+    </a>
+  
+    <br>---------------------------------
+    {% endfor %}
+    <br>
+    <a href="/upload.php">
+        <button>upload</button>
+    </a>
+</body>
